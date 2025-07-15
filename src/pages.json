@@ -1,24 +1,31 @@
 {
   "pages": [
-    {
-      "path": "pages/index",
-      "type": "home"
-    },
-    {
-      "path": "pages/hi",
-      "type": "page",
-      "layout": "home"
-    }
+    { "path": "pages/index", "style": { "navigationBarTitleText": "首页" } },
+    { "path": "pages/login", "style": { "navigationBarTitleText": "登录" } },
+    { "path": "pages/client/c-home", "style": { "navigationBarTitleText": "主页" } },
+    { "path": "pages/client/c-orders", "style": { "navigationBarTitleText": "订单" } },
+    { "path": "pages/client/c-profile", "style": { "navigationBarTitleText": "我的" } },
+    { "path": "pages/client/c-favorite", "style": { "navigationBarTitleText": "收藏" } },
+    { "path": "pages/client/c-reserve", "style": { "navigationBarTitleText": "预约" } },
+    { "path": "pages/hi", "style": { "navigationBarTitleText": "Hi" } },
+    { "path": "pages/merchant/m-services", "style": { "navigationBarTitleText": "服务管理" } },
+    { "path": "pages/merchant/m-orders", "style": { "navigationBarTitleText": "商家订单" } },
+    { "path": "pages/merchant/m-comments", "style": { "navigationBarTitleText": "商家评价" } },
+    { "path": "pages/merchant/m-publish", "style": { "navigationBarTitleText": "发布服务" } },
+    { "path": "pages/merchant/m-login", "style": { "navigationBarTitleText": "商家登录" } }
   ],
-  "globalStyle": {
-    "backgroundColor": "@bgColor",
-    "backgroundColorBottom": "@bgColorBottom",
-    "backgroundColorTop": "@bgColorTop",
-    "backgroundTextStyle": "@bgTxtStyle",
-    "navigationBarBackgroundColor": "#000000",
-    "navigationBarTextStyle": "@navTxtStyle",
-    "navigationBarTitleText": "Vitesse-Uni",
-    "navigationStyle": "custom"
+  "tabBar": {
+    "list": [
+      { "pagePath": "pages/client/c-home", "text": "主页" },
+      { "pagePath": "pages/client/c-orders", "text": "订单" },
+      { "pagePath": "pages/client/c-favorite", "text": "收藏" },
+      { "pagePath": "pages/client/c-profile", "text": "我的" }
+    ]
   },
-  "subPackages": []
+  "easycom": {
+      "autoscan": true,
+      "custom": {
+        "^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue"
+      }
+    }
 }

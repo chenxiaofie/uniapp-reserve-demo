@@ -5,7 +5,18 @@
 
 interface NavigateToOptions {
   url: "/pages/index" |
-       "/pages/hi";
+       "/pages/favorite" |
+       "/pages/hi" |
+       "/pages/home" |
+       "/pages/login" |
+       "/pages/orders" |
+       "/pages/profile" |
+       "/pages/reserve" |
+       "/pages/merchant/m-comments" |
+       "/pages/merchant/m-login" |
+       "/pages/merchant/m-orders" |
+       "/pages/merchant/m-publish" |
+       "/pages/merchant/m-services";
 }
 interface RedirectToOptions extends NavigateToOptions {}
 
